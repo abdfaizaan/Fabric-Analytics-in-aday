@@ -52,7 +52,11 @@ By the end of this lab, you will have learned:
 
 ## Task 1: Enable a Microsoft Fabric trial license
 
-1. On the lab VM desktop, open the **browser** and navigate to [Microsoft Power BI Portal](https://app.powerbi.com/). You will be navigated to the login page.
+1. On the lab VM desktop, open the **browser** and navigate to **Microsoft Power BI Portal** using the link mentioned below. You will be navigated to the login page.
+
+   ```
+   https://app.powerbi.com/
+   ```
 
     >**Note:** If you're using the lab environment, it may sign you in
     automatically.
