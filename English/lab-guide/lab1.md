@@ -6,7 +6,7 @@
 - Document Structure
 - Scenario / Problem Statement
 - Overview of Power BI Desktop Report
-  - Task 1: Set up Power BI Desktop in lab environment
+  - Task 1: Set up Power BI Desktop in the lab environment
   - Task 2: Analyze Power BI Desktop Report
   - Task 3: Review Power Queries
 - References
@@ -15,17 +15,17 @@
 
 The lab includes steps for the user to follow along with associated
 screenshots that provide visual aid. In each screenshot, sections are
-highlighted with orange boxes to indicate the area(s) user should focus
+highlighted with orange boxes to indicate the area(s) the user should focus
 on.
 
-**Note:** Some of the screenshots may be out of date due to ongoing
+  >**Note:** Some of the screenshots may be out of date due to ongoing
 product updates.
 
 # Scenario / Problem Statement
 
 Fabrikam, Inc. is a wholesale novelty goods distributor. As a
-wholesaler, Fabrikam's customers are mostly companies who resell to
-individuals. Fabrikam sells to retail customers across the United States
+wholesaler, Fabrikam's customers are mostly companies that resell to
+individuals. Fabrikam sells to retail customers across the United States, 
 including specialty stores, supermarkets, computing stores, and tourist
 attraction shops. Fabrikam also sells to other wholesalers via a network
 of agents who promote the products on Fabrikam's behalf. While all
@@ -38,18 +38,18 @@ interpret data sets to solve business problems. You also put together
 visualizations like charts and graphs, write reports, and present them
 to the decision-makers in the organization.
 
-In order to draw valuable insights from the data, you pull data from
-multiple systems, clean it and mash it together. You pull data from the
+To draw valuable insights from the data, you pull data from
+multiple systems, clean it, and mash it together. You pull data from the
 following sources:
 
-- **Sales Data:** comes from the ERP system and data is stored in an
+- **Sales Data:** comes from the ERP system, and the  data is stored in an
   ADLS Gen2 database. It gets updated at noon / 12 PM every day.
 
-- **Supplier Data:** comes from different suppliers and data is stored
+- **Supplier Data:** comes from different suppliers, and data is stored
   in a Snowflake database. It gets updated at midnight / 12 AM every
   day.
 
-- **Customer Data:** comes from Customer Insights and data is stored in
+- **Customer Data:** comes from Customer Insight, and the data is stored in
   Dataverse. The data is always up to date.
 
 - **Employee Data:** comes from the HR system; it is stored as an export
@@ -71,16 +71,15 @@ use Power Query to update your model.
   time to capture any updates that happened to the source systems.
 
 - Any errors in any of the data sources that you are pulling from will
-  result in your dataset refresh breaking. A lot of times the employee
-  file does not upload on time resulting in your dataset refresh
+  result in your dataset refresh breaking. A lot of times, the employee
+  file does not upload on time, resulting in your dataset refresh
   breaking.
 
 - It takes a very long time to make any changes to your data model, as
   Power Query takes a long time to refresh your previews, given the
   large data sizes and complex transformations.
 
-- You need a Windows PC to use Power BI Desktop, even though the
-  corporate standard is Mac.
+- You need a Windows PC to use Power BI Desktop, even though the corporate standard is Mac.
 
 You heard about Microsoft Fabric and decided to try it to see if it
 will address your challenges.
@@ -90,7 +89,7 @@ will address your challenges.
 Before we start with Fabric, let's look at the current Report in Power
 BI Desktop to understand the transformations and the model.
 
-## Task 1: Set up Power BI Desktop in lab environment
+## Task 1: Set up Power BI Desktop in the lab environment
 
 1. Open the **FAIAD.pbix** located in **Reports** folder on the
     **desktop** of your lab environment. The file will open in Power BI
@@ -104,7 +103,7 @@ BI Desktop to understand the transformations and the model.
 
      ![A screenshot to copy credentials](../media/lab-01/21042025(3).png)
   
-3. On the Sign into Microsoft Azure tab, you will see the login screen, enter the following Email/ Username and then click on **Next**.
+3. On the Sign into Microsoft Azure tab, you will see the login screen. Enter the following Email/ Username and then click on **Next**.
 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
@@ -143,7 +142,7 @@ couple of minutes understanding the report and move to the next steps.
 1. Let's analyze data by Sales Territory. Select **New England from the
     Sales Territory** (Scatter plot) visual. Notice from the Sales over
     time, Reseller Tailspin Toys has more sales compared to Wingtip Toys
-    in New England. If you look at the Sales YoY% column chart you will
+    in New England. If you look at the Sales YoY% column chart, you will
     notice that Wingtip Toys sales growth has been low and declining
     quarter over quarter during the past year. After a small rebound in
     Q3 it went down again in Q4.
@@ -152,8 +151,7 @@ couple of minutes understanding the report and move to the next steps.
 selected](../media/lab-01/image17.png)
 
 2. Let's compare this to the Rocky Mountain territory. Select **Rocky
-    Mountain from Sales Territory** (Scatter plot) visual. Notice in the
-    Sales YoY% column chart, sales for Wingtip Toys have increased
+    Mountain from Sales Territory** (Scatter plot) visual. Notice in the Sales YoY% column chart, sales for Wingtip Toys have increased
     dramatically in 2023 Q4 after being low for the previous two
     quarters.
 
@@ -163,7 +161,7 @@ selected](../media/lab-01/image19.png)
 3. Select **Rocky Mountain from Sales Territory** to remove the filter.
 
 4. From the Scatter plot visual at the bottom center of the screen
-    (Sales Orders by Sales) select the outlier on the top right (4th
+    (Sales Orders by Sales) Select the outlier on the top right (4th
     quadrant). Notice the margin % is 52%, which is above the average of
     50%. Also, the Sales YoY% has gone up in the last two quarters of 2023.
 
@@ -204,9 +202,9 @@ page](../media/lab-01/image25.png)
 
     c. We have Supplier data by Product. Supplier connects to Product.
 
-    d. We have Reseller's location data by Geo. Geo connects to Reseller.
+    d. We have the Reseller's location data by Geo. Geo connects to Reseller.
 
-    e. We have Customer information by Reseller. Customer connects to Reseller.
+    e. We have Customer information from the Reseller. Customer connects to Reseller.
 
 ## Task 3: Review Power Queries
 
@@ -214,7 +212,7 @@ page](../media/lab-01/image25.png)
     
       ![](../media/lab-01/image28.png)
 
-2. Power Query window opens. From the ribbon, select **Home -> Data** **source settings**. Data source settings dialog opens. As you scroll through the list, you will notice there are four data sources as mentioned in the problem statement:
+2. Power Query window opens. From the ribbon, select **Home -> Data** **source settings**. The data source settings dialog opens. As you scroll through the list, you will notice there are four data sources as mentioned in the problem statement:
 
     - Snowflake
 
@@ -270,12 +268,12 @@ page](../media/lab-01/image25.png)
     Product, Reseller, and Date. It also has Sales facts.
 
     - **Geo dimension** is created by merging data from Cities,
-      Countries, and States query.
+      Countries and States query.
 
     - **Product dimension** is created by merging data from Product
       Groups and Product Item Group query.
 
-    - **Reseller dimension** is filtered using BuyingGroup query.
+    - **Reseller dimension** is filtered using the BuyingGroup query.
 
     - **Sales fact** is created by merging InvoiceLineItems with Invoice
       query.
@@ -305,10 +303,10 @@ page](../media/lab-01/image25.png)
 14. Notice the **SnowflakeData** folder has Supplier dimension and
     PO(Order / Spend) fact.
 
-    - **Supplier dimension** is created by merging Suppliers query with
+    - **Supplier dimension** is created by merging the Suppliers query with
       SupplierCategories query.
 
-    - **PO fact** is created by merging PO with PO Line Items query.
+    - **PO fact** is created by merging the PO with the PO Line Items query.
 
 15. For the SharePoint data source, select the **People** query from the
     Queries window. Selecting this query will prompt you for
