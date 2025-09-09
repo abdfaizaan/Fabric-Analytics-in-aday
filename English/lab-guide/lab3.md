@@ -32,11 +32,11 @@ There are multiple ways to ingest this data.
 
 - **Shortcuts:** This creates a link to the data, and we can use Visual query views to transform it. We are going to use Shortcuts in this lab.
 
-- **Notebooks:** This requires us to write code. It is a developer friendly approach.
+- **Notebooks:** This requires us to write code. It is a developer-friendly approach.
 
 - **Dataflow Gen2:** You are probably familiar with Power Query or Dataflow Gen1. Dataflow Gen2, as the name indicates, is the newer version of Dataflow. It provides all the capabilities of Power Query / Dataflow Gen1 with the added ability to transform and ingest data into multiple data sources. We are going to introduce this in the next couple of labs.
 
-- **Data Pipeline:** This is an orchestration tool. Activities can be orchestrated to extract, transform, and ingest data. We will be using Data Pipeline to execute Dataflow Gen2 activity which in turn will perform extraction, transformation, and ingestion.
+- **Data Pipeline:** This is an orchestration tool. Activities can be orchestrated to extract, transform, and ingest data. We will be using Data Pipeline to execute Dataflow Gen2 activity, which in turn will perform extraction, transformation, and ingestion.
 
 We will start by creating a Shortcut to ingest data into a Lakehouse
 from an ADLS Gen2 data source. Once ingested, we are going to use Visual
@@ -54,7 +54,7 @@ By the end of this lab, you will have learned:
 
 Shortcuts are used to create a link to the target location. Shortcuts
 provide access to the data without needing to physically move the data
-into the lakehouse. This is like creating shortcuts in Windows desktop.
+into the lakehouse. This is like creating shortcuts in the Windows desktop.
 
 1. Let's navigate back to the **Fabric workspace** **(1)** you created in the Lab 2, Task 2.
 
@@ -72,7 +72,11 @@ into the lakehouse. This is like creating shortcuts in Windows desktop.
 
 6. Select **New connection (1)**.
 
-7. Enter the following link for the **URL** property: https://stvnextblobstorage.dfs.core.windows.net/fabrikam-sales **(2):**
+7. Enter the following link for the **URL** property **(2):**
+
+    ```
+    https://stvnextblobstorage.dfs.core.windows.net/fabrikam-sales
+    ```
 
 8. Under the **Connection** section (already selected by default), just review the details for **Create New Connection (3)** — no need to click anything.
 
@@ -186,16 +190,12 @@ model. We are going to create views to transform the data.
 4. Repeat the same steps for the **States** and **Countries** tables.
 
     Next, we need to merge these queries. The visual query editor comes with
-    the option to use Power Query editor. Let's use this, since we are
+    the option to use the Power Query editor. Let's use this, since we are
     familiar with this.
 
-5. From the menu in Visual query editor, select the **Open in popup** icon (towards the right). You will be navigated to Power Query editor. **Note:** You may have to scroll to the right or re-open your visual query tab if you do not immediately see this icon.
+6. With **Cities (1)** query selected, select **Combine (2) ->  Merge queries as new (3)**. Merge queries dialog opens.
 
-   ![](../media/lab-03/image16.png)
-
-6. With **Cities (1)** query selected, from the Power Query editor ribbon, select **Home (2) -> Combine (3) -> Merge queries dropdown (4) -> Merge queries as new (5)**. Merge queries dialog opens.
-
-   ![](../media/lab-03/image17.png)
+   ![](../media/lab-03/L3T2S5-0909.png)
 
 7. In the **Left table for merge**, select **Cities**.
 
@@ -212,9 +212,9 @@ model. We are going to create views to transform the data.
     Notice a new query called **Merge** has been created. We need a few
     columns from States.
 
-12. In the **Data view** (bottom panel), click on the **double arrow** next to the **States** column (last column to the right).
+12. In the **Data view** (bottom panel), click on the **double arrow (1)** next to the **States** column (last column to the right).
 
-13. A panel opens. **Select** the following columns:
+13. A panel opens. **Select** the following columns **(2)**:
 
     a. StateProvinceCode
 
@@ -224,15 +224,15 @@ model. We are going to create views to transform the data.
 
     d. SalesTerritory
 
-14. Select **OK**.
+14. Select **OK (3)**.
 
-    ![](../media/lab-03/image19.png)
+    ![](../media/lab-03/L3T2S13-0909.png)
 
     We need to merge Countries query now.
 
-15. With **Merge (1)** query selected, select **Home (2) -> Combine (3) -> Merge queries dropdown (4) -> Merge queries (5)**.
+15. With **Merge (1)** query selected, select **Combine (2) -> Merge queries (2)**.
 
-    ![](../media/lab-03/image20.png)
+    ![](../media/lab-03/L3T2S14-0909.png)
 
 16. Merge query dialog opens. In the **Right table for merge**, select **Countries**.
 
@@ -270,14 +270,13 @@ model. We are going to create views to transform the data.
 
     ![](../media/lab-03/image22.png)
 
-    We do not need all the columns in the **Merge** table. Make sure to only
-    select those that we need.
+    We do not need all the columns in the **Merge** table. Make sure to only select those that we need.
 
-23. With **Merge (1)** query selected, from the ribbon select **Home (2) -> Manage columns (3) -> Choose columns (4) -> Choose columns (5)**.
+23. With **Merge (1)** query selected, from the ribbon select **Manage columns (2) -> Choose columns (3)**
 
     >**Note:** If the Choose columns option is not visible, you can find it under Manage columns.
 
-    ![](../media/lab-03/t2p23.png)
+    ![](../media/lab-03/L3T2S22-0909.png)
 
 24. Choose columns dialog opens. **Uncheck** the following columns.
 
@@ -302,19 +301,17 @@ model. We are going to create views to transform the data.
     rename Merge query and Enable load, so that the data is loaded from this
     query.
 
-26. **Right-click** on the **Merge** query in the Queries (left) panel. Select **Rename** and rename the query to **Geo**.
+26. **Right-click (1)** on the **Merge** query. Select **Rename (2)** and rename the query to **Geo**.
 
-27. **Right-click** on the **Geo** query in the Queries (left) panel. Select **Enable Load** to enable this query.
+    ![](../media/lab-03/L3T2S25-0909.png)
+
+27. **Right-click (1)** on the **Geo** query. Select **Enable Load (2)** to enable this query.
 
 28. Make sure that the Cities, States and Countries queries are **disabled**.
 
-29. Select **Save**, found in the bottom right of the power query editor.
-
-    ![](../media/lab-03/image25.png)
+    ![](../media/lab-03/L3T2S28-0909.png)
 
     We will be navigated to the Visual query editor. Let's now save this query as a view.
-
-    >**Note:** All the steps we performed using Power Query editor can be performed using Visual query editor as well.
 
 30. From the Visual query editor menu select **Save as view**.
 
