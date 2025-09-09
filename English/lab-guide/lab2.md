@@ -39,8 +39,8 @@
 Today, you will learn about various key features of Microsoft Fabric.
 This is an introductory workshop intended to introduce you to the
 various product experiences and items available in Fabric. By the end of
-this workshop, you will learn how to use Lakehouse, Dataflow Gen2, Data
-Pipeline, DirectLake and more.
+this workshop, you will learn how to use Lakehouse, Dataflow Gen2, and Data
+Pipeline, DirectLake, and more.
 
 By the end of this lab, you will have learned:
 
@@ -58,8 +58,7 @@ By the end of this lab, you will have learned:
     automatically.
 
     >**Note:** If you are not using the lab environment and have an existing
-    Power BI account, you may want to use the browser in private / incognito
-    mode.
+    Power BI account, you may want to use the browser in private / incognito mode.
 
 2. Copy the Username and paste it into the Email field of the dialog and select Submit.
 
@@ -84,7 +83,7 @@ By the end of this lab, you will have learned:
 6. We assume you are familiar with the layout of Power BI Service. If you have any questions, please do not hesitate to ask the instructor.
 
     Currently, you are in the **My Workspace**. To work with Fabric items,
-    you will need a trial license and a workspace that has Fabric license
+    you will need a trial license and a workspace that has a Fabric license
     assigned. Let's set this up.
 
 7. On the top right corner of the screen, select the **user** **icon**.
@@ -150,7 +149,7 @@ By the end of this lab, you will have learned:
 
    >**Note:** lh here refers to Lakehouse. We are prefixing lh so that it is easy to identify and search.
   
-   >**Note:** The preview feature of **Lakehouse Schemas** is very interesting, so it is something you should be aware of. Since it is in **Preview** state, we will ignore it so there is no negative impact on the lab experience. Once the feature is generally available, we will bring it into this lab.
+   >**Note:** The preview feature of **Lakehouse Schemas** is very interesting, so it is something you should be aware of. Since it is in **Preview** state, we will ignore it, so there is no negative impact on the lab experience. Once the feature is generally available, we will bring it into this lab.
 
 4. Select **Create**.
 
@@ -173,7 +172,7 @@ By the end of this lab, you will have learned:
 
 ## Task 4: Data Factory Experience
 
-1. Select **Workloads** icon on the left of your screen. A dialog with the list of Fabric experiences will open. The list of experiences includes Power BI, Data Factory, Industry Solutions, Real-Time Intelligence, Data Engineering, Data Science and Data Warehouse. Let's explore.
+1. Select the **Workloads** icon on the left of your screen. A dialog with the list of Fabric experiences will open. The list of experiences includes Power BI, Data Factory, Industry Solutions, Real-Time Intelligence, Data Engineering, Data Science, and Data Warehouse. Let's explore.
 
     ![](../media/lab-02/image19.png)
 
@@ -199,7 +198,7 @@ By the end of this lab, you will have learned:
 
     c. **Azure Data Factory:** Azure Data Factory is a cloud-based data integration service that allows you to create data-driven workflows for orchestrating and automating data movement and data transformation.
 
-    d. **Apache Airflow Job:** Apache Airflow is an open-source platform used to programmatically author, schedule, and monitor workflows. In Data Factory it allows you to create, schedule, and manage complex data workflows.
+    d. **Apache Airflow Job:** Apache Airflow is an open-source platform used to programmatically author, schedule, and monitor workflows. In Data Factory, it allows you to create, schedule, and manage complex data workflows.
 
     e. **Copy Job:** Copy Job is a feature that allows you to copy data from one source to another. It provides a simple and efficient way to move data between different data stores.
 
@@ -251,7 +250,7 @@ By the end of this lab, you will have learned:
 
     a. **Sustainability solutions:** supports the ingestion, standardization, and analysis of Environmental, Social, and Governance (ESG) data.
 
-    b. **Retail solutions:** helps in managing large volumes of data, integrating data from various sources, and providing real-time analytics for prompt decision-making. Retailers can use these solutions for inventory optimization, customer segmentation, sales forecasting, dynamic pricing, and fraud detection.
+    b. **Retail solutions:** help in managing large volumes of data, integrating data from various sources, and providing real-time analytics for prompt decision-making. Retailers can use these solutions for inventory optimization, customer segmentation, sales forecasting, dynamic pricing, and fraud detection.
 
     c. **Healthcare solutions:** are strategically designed to accelerate the time to value for customers by addressing the critical need to efficiently transform healthcare data into a suitable format for analysis.
 
@@ -299,7 +298,7 @@ By the end of this lab, you will have learned:
     shareable tables and visuals.
 
     c. **Real-Time Dashboard:** Used to visualize real-time dashboards
-    within seconds from data ingestion.
+    within seconds of data ingestion.
 
     d. **Eventstream:** Used to capture, transform, and route real-time
     event stream.
@@ -354,7 +353,7 @@ By the end of this lab, you will have learned:
 
     Data Engineering is a tool that helps you design, build, and maintain
     infrastructures and systems for collecting, storing, processing, and
-    analyzing large volumes of data. It allows you to create a lakehouses
+    analyzing large volumes of data. It allows you to create a lakehouse
     and operationalize your workflow to build, transform, and share your
     data estate.
 
@@ -363,11 +362,11 @@ By the end of this lab, you will have learned:
     a. **Lakehouse:** Used to store big data for cleaning, querying,
     reporting, and sharing.
 
-    b. **Notebook:** Used for data ingestion, preparation, analysis and
+    b. **Notebook:** Used for data ingestion, preparation, analysis, and
     other data-related tasks using various languages like Python and Scala.
 
-    c. **Environment:** Used to set up shared libraries, spark compute
-    settings and resources for notebooks and spark job definitions.
+    c. **Environment:** Used to set up shared libraries, Spark compute
+    settings and resources for notebooks and Spark job definitions.
 
     d. **Spark Job Definition:** Used to define, schedule, and manage
     Apache jobs.
@@ -386,7 +385,7 @@ By the end of this lab, you will have learned:
     a. **Explore a Sample:** Click on the "Select" button to use a sample
     and learn about Data Engineering.
 
-    b. **What's a Lakehouse?:** Click on the "Open" button to learn
+    b. **What's a Lakehouse?** Click on the "Open" button to learn
     about lakehouses and how they can be used.
 
     c. **Get Data Experience in Lakehouse:** Click on the "Open" button
@@ -444,12 +443,12 @@ By the end of this lab, you will have learned:
     c. **Notebook:** Used to explore data and build machine learning
     solutions.
 
-    d. **Environment:** Used to set up shared libraries, spark compute
-    settings and resources for notebooks and spark job definitions.
+    d. **Environment:** Used to set up shared libraries, Spark compute
+    settings and resources for notebooks and Spark job definitions.
 
     e. **Data agent (preview):** Used to create conversational AI
     experiences that answer questions about data stored in lakehouses,
-    warehouses, Power BI semantic models and KQL databases
+    warehouses, Power BI semantic models, and KQL databases
 
     f. **Python Notebook:** Used to import Python notebooks from a local
     machine.
@@ -485,9 +484,9 @@ By the end of this lab, you will have learned:
 
     ![](../media/lab-02/image30.png)
 
-2. You will be directed to the Data Warehouse Home page. Below is a detailed overview of its sections, designed to help you use Data Warehouse effectively and step-by-step.  
+2. You will be directed to the Data Warehouse Home page. Below is a detailed overview of its sections, designed to help you use the Data Warehouse effectively and step-by-step.  
 
-    **What is Data Warehouse?** 
+    **What is a Data Warehouse?** 
 
     Data Warehouse is a tool that helps you store and analyze data in a secure SQL warehouse. It allows you to scale up your insights by benefiting from top-tier performance at petabyte scale in an open-data format.
 
@@ -523,9 +522,9 @@ By the end of this lab, you will have learned:
 
     **Get Started:** 
     
-    To start using Data Warehouse, follow these steps:
+    To start using the Data Warehouse, follow these steps:
 
-    a. **Explore a sample warehouse:** Start a new warehouse with sample
+    a. **Explore a sample warehouse:** Start a new warehouse with a sample
     data already loaded
 
     b. **Get Started with Warehouse:** Click on the "Open" button to
