@@ -34,8 +34,8 @@
 
 # Introduction 
 
-In our scenario, Supplier Data is in Snowflake, Customer Data is in
-Dataverse, and Employee Data are in SharePoint. All these data sources
+In our scenario, Supplier Data is in Snowflake, and Customer Data is in
+Dataverse and Employee Data are in SharePoint. All these data sources
 are updated at different times. To minimize the number of data refreshes
 for Dataflows, we are going to create individual Dataflows for Snowflake
 and SharePoint data sources.
@@ -46,7 +46,7 @@ The IT team has already established a link to Dataverse and applied the
 necessary data transformations, mirroring those in the Power BI Desktop
 file. They have ingested this data into the Lakehouse in the Admin
 workspace and have given us access to the table(s). We are going to
-create a Shortcut to table(s) the Lakehouse IT team has created.
+create a Shortcut to the table(s) the Lakehouse IT team has created.
 
 By the end of this lab, you will have learned:
 
@@ -68,7 +68,7 @@ By the end of this lab, you will have learned:
 
     ![](../media/lab-04/image6(3)upd.png)
 
-4. From the pop-up window, **Uncheck the Enable Git integration, deployment pipelines and Public API scenarios box (1)** and click on **Create (2)**.
+4. From the pop-up window, **Uncheck the Enable Git integration, deployment pipelines, and Public API scenarios box (1)** and click on **Create (2)**.
 
     ![](../media/lab-04/image6(1).png)
 
@@ -93,7 +93,7 @@ Query](../media/lab-04/image7.png)
 
     ![A screenshot of a computer](../media/lab-04/image8.png)
 
-    >**Note:** If you are working in the lab environment, please select the **ellipsis (...) (1)** on the top right of the screen. Use the slider to **enable** **VM Native Clipboard (2)**. Select **OK** in the dialog. Once done pasting the queries, you can disable this option.
+    >**Note:** If you are working in the lab environment, please select the **ellipsis (...) (1)** on the top right of the screen. Use the slider to **enable** **VM Native Clipboard (2)**. Select **OK** in the dialog. Once you have pasted the queries, you can disable this option.
 
     ![](../media/lab-03/21042025(9).png)
 
@@ -150,8 +150,8 @@ Now we need to ingest People data into the Lakehouse.
 
 9. Choose destination settings dialog opens. Make sure "**Use automatic settings**" is **enabled**.
 
-   > **Note:** You can disable automatic settings and notice you have options
-   to set Update method and Schema options. Once done exploring, make sure
+   > **Note:** You can disable automatic settings, and notice you have options
+   to set the Update method and Schema options. Once done exploring, make sure
    "**Use automatic settings**" is **enabled**.
 
 10. Select **Save settings**.
@@ -172,7 +172,7 @@ Now we need to ingest People data into the Lakehouse.
 
    ![](../media/lab-04/image18.png)
 
-4. Dataflow properties dialog opens. Change the **Name** to **df_People_SharePoint**
+4. The Dataflow properties dialog opens. Change the **Name** to **df_People_SharePoint**
 
 5. In the **Description** text box add **Dataflow to ingest People data from SharePoint to Lakehouse**.
 
@@ -232,9 +232,9 @@ Now we need to ingest People data into the Lakehouse.
 
 9. Navigate back to the **browser**.
 
-10. In the **Dataflow pane** select the **center pane**, enter **Ctrl+V** (currently right click Paste is not supported). If you are using MAC device, please use **Cmd+v** to paste.
+10. In the **Dataflow pane** select the **center pane**, enter **Ctrl+V** (currently right click Paste is not supported). If you are using a MAC device, please use **Cmd+v** to paste.
 
-    >**Note:** If you are working in the lab environment, please select the **ellipsis (...) (1)** on the top right of the screen. Use the slider to **enable** **VM Native Clipboard (2)**. Select **OK** in the dialog. Once done pasting the queries, you can disable this option.
+    >**Note:** If you are working in the lab environment, please select the **ellipsis (...) (1)** on the top right of the screen. Use the slider to **enable** **VM Native Clipboard (2)**. Select **OK** in the dialog. Once you have pasted the queries, you can disable this option.
 
     ![](../media/lab-03/21042025(9).png)
 
@@ -275,10 +275,10 @@ will see a warning message requesting you to configure the connection.
 Connection is established, and you can view the data in the preview
 panel. Feel free to navigate through the Applied Steps of the queries.
 Basically, the Suppliers query has the details of suppliers and
-SupplierCategories, as the name implies this table has all the supplier
+SupplierCategories, as the name implies, this table has all the supplier
 categories. These two tables are joined to create the Supplier
 dimension, with the columns we need. Similarly, we have PO Line Items
-merged with PO to create the PO fact. Now we need to ingest the Supplier
+merged with the PO to create the PO fact. Now we need to ingest the Supplier
 and PO data into the Lakehouse.
 
 ## Task 7: Configure Data Destination for Supplier and PO queries
@@ -307,7 +307,7 @@ and PO data into the Lakehouse.
 
    ![](../media/lab-04/21042025(14).png)
 
-10. Choose destination settings dialog opens. We will use the automatic settings as this will do a full update of the data. Also, it will rename the columns as needed. Select **Save settings**.
+10. Choose destination settings dialog opens. We will use the automatic settings, as this will do a full update of the data. Also, it will rename the columns as needed. Select **Save settings**.
 
     ![A screenshot of Choose destination
 settings](../media/lab-04/image29.png)
@@ -343,7 +343,7 @@ settings](../media/lab-04/image29.png)
    >**Note:** If you do not see the newly created tables, select the
    **ellipsis (...)** next to Tables and select refresh to refresh the Tables.
 
-   Now let's create a shortcut to bring in data from Dataverse.
+   Now, let's create a shortcut to bring in data from Dataverse.
 
 # Shortcut to ADLS Gen2
 
@@ -374,7 +374,7 @@ Lakehouse view (not SQL analytics endpoint).
 
    ![](../media/lab-04/image37-upd.png)
 
-7. From the sign in dialog box, select the **user account** you have been using for these labs. **Note:** Your account will be different from the screenshot below.
+7. From the sign-in dialog box, select the **user account** you have been using for these labs. **Note:** Your account will be different from the screenshot below.
 
    ![](../media/lab-04/image38-upd.png)
 
@@ -407,7 +407,7 @@ Lakehouse view (not SQL analytics endpoint).
 
    ![](../media/lab-04/image35.png)
 
-3. New shortcut dialog opens. Select **Microsoft OneLake** option under Internal sources.
+3. New shortcut dialog opens. Select the **Microsoft OneLake** option under Internal sources.
 
    ![](../media/lab-04/image40.png)
 
@@ -417,7 +417,7 @@ Lakehouse view (not SQL analytics endpoint).
 
    ![](../media/lab-04/image41.png)
 
-6. In the left panel, expand **lh_dataverse -> Tables**. Notice the IT admin has provided access to Customer table.
+6. In the left panel, expand **lh_dataverse -> Tables**. Notice the IT admin has provided access to the Customer table.
 
 7. Select **Customer**.
 
@@ -437,7 +437,7 @@ Lakehouse view (not SQL analytics endpoint).
 
     We have successfully created a shortcut to another Lakehouse.
 
-    We have now ingested all the data into Lakehouse. In the next lab, we will schedule Dataflow refresh.
+    We have now ingested all the data into Lakehouse. In the next lab, we will schedule a Dataflow refresh.
 
     In the next lab, we will set up schedule refreshes.
 
