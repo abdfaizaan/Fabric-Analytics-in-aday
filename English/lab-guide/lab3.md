@@ -171,13 +171,12 @@ model. We are going to create views to transform the data.
 
    ![](../media/lab-03/image13.png)
 
-    You will be navigated to SQL analytics endpoint. Notice the Explorer
+    You will be navigated to the SQL analytics endpoint. Notice the Explorer
     panel has changed. You can now create views, stored procedures, queries
-    and more. We are going to create a visual query as it provides a low
-    code, like Power Query, interface. We will save the result as a view.
+    and more. We are going to create a visual query as it provides a low-code, like Power Query, interface. We will save the result as a view.
 
     We will start by creating a Geo view. We need to merge data from the
-    Cities, States and Countries tables to create the Geo view.
+    Cities, States, and Countries tables to create the Geo view.
 
 2. From the top menu, click the drop-down next to **New SQL query (1)** and then select **New visual query (2)**.
 
@@ -193,15 +192,19 @@ model. We are going to create views to transform the data.
     the option to use the Power Query editor. Let's use this, since we are
     familiar with this.
 
-6. With **Cities (1)** query selected, select **Combine (2) ->  Merge queries as new (3)**. Merge queries dialog opens.
+5. From the menu in the Visual query editor, select the Open in popup icon (towards the right). You will be navigated to the Power Query editor. Note: You may have to scroll to the right or reopen your visual query tab if you do not immediately see this icon.
 
-   ![](../media/lab-03/L3T2S5-0909.png)
+   ![](../media/lab-03/L3T2S5-1009.png)
+
+6. With **Cities (1)** query selected, from the Power Query editor ribbon, select **Home (2) -> Combine (3) -> Merge queries dropdown (4) -> Merge queries as new (5)**. The merge queries dialog opens.
+
+   ![](../media/lab-03/L3T2S6-1009.png)
 
 7. In the **Left table for merge**, select **Cities**.
 
 8. In the **Right table for merge**, select **States**.
 
-9. Select **StateProvinceID** columns from both the tables. We are going to join using this column.
+9. Select the **StateProvinceID** columns from both tables. We are going to join using this column.
 
 10. Select **Inner** as the **Join kind**.
 
@@ -228,15 +231,15 @@ model. We are going to create views to transform the data.
 
     ![](../media/lab-03/L3T2S13-0909.png)
 
-    We need to merge Countries query now.
+    We need to merge the Countries query now.
 
-15. With **Merge (1)** query selected, select **Combine (2) -> Merge queries (2)**.
+15. With **Merge (1)** query selected, select **Home (2) -> Combine (3) -> Merge queries dropdown (4) -> Merge queries (5)**.
 
-    ![](../media/lab-03/L3T2S14-0909.png)
+    ![](../media/lab-03/L3T2S15-1009.png)
 
 16. Merge query dialog opens. In the **Right table for merge**, select **Countries**.
 
-17. Select **CountryID** columns from both the tables. We are going to join using this column.
+17. Select the **CountryID** columns from both tables. We are going to join using this column.
 
 18. Select **Inner** as the **Join kind**.
 
@@ -272,11 +275,11 @@ model. We are going to create views to transform the data.
 
     We do not need all the columns in the **Merge** table. Make sure to only select those that we need.
 
-23. With **Merge (1)** query selected, from the ribbon select **Manage columns (2) -> Choose columns (3)**
+23. With **Merge (1)** query selected, from the ribbon select **Home (2) -> Choose columns (3) -> Choose columns (4)**.
 
     >**Note:** If the Choose columns option is not visible, you can find it under Manage columns.
 
-    ![](../media/lab-03/L3T2S22-0909.png)
+    ![](../media/lab-03/L3T2S23-1009.png)
 
 24. Choose columns dialog opens. **Uncheck** the following columns.
 
@@ -298,22 +301,22 @@ model. We are going to create views to transform the data.
 
     Notice the process is like Power Query, we have all the steps recorded
     both in the Applied Steps panel on the right and the visual view. Let's
-    rename Merge query and Enable load, so that the data is loaded from this
+    rename the Merge query and Enable load, so that the data is loaded from this
     query.
 
-26. **Right-click (1)** on the **Merge** query. Select **Rename (2)** and rename the query to **Geo**.
-
-    ![](../media/lab-03/L3T2S25-0909.png)
+26. **Right-click** on the **Merge** query in the Queries (left) panel. Select **Rename** and rename the query to **Geo**.
 
 27. **Right-click (1)** on the **Geo** query. Select **Enable Load (2)** to enable this query.
 
-28. Make sure that the Cities, States and Countries queries are **disabled**.
+28. Make sure that the Cities, States, and Countries queries are **disabled**.
 
-    ![](../media/lab-03/L3T2S28-0909.png)
+29. Select **Save (3)**, found in the bottom right of the Power Query editor.
+
+    ![](../media/lab-03/L3T2S29-1009.png)
 
     We will be navigated to the Visual query editor. Let's now save this query as a view.
 
-30. From the Visual query editor menu select **Save as view**.
+30. From the Visual query editor menu, select **Save as view**.
 
     ![](../media/lab-03/image26.png)
 
@@ -334,9 +337,9 @@ model. We are going to create views to transform the data.
 
 ## Task 3: Create Reseller view using Visual Query
 
-Let's create Reseller view which is created by merging Customers table
-with the BuyingGroups table. This time around we will create the view
-using Visual query without opening the Power Query option.
+Let's create a Reseller view that is created by merging the Customers table
+with the BuyingGroups table. This time around, we will create the view
+using a Visual query without opening the Power Query option.
 
 1. From the top menu, click the drop-down next to **New SQL query (1)** and then select **New visual query (2)**.
 
@@ -346,7 +349,7 @@ using Visual query without opening the Power Query option.
 
 3. Repeat the same steps for the **Customers** table.
 
-4. **Select the Customers** query. When selected, Customers will have a "**+"** sign after Table (this indicates we are adding a step after Table. If you do not see the **"+"** sign after table, you may have selected a different step. Select Table and you will be good to go).
+4. **Select the Customers** query. When selected, Customers will have a "**+"** sign after Table (this indicates we are adding a step after Table. If you do not see the **"+"** sign after table, you may have selected a different step. Select Table, and you will be good to go).
 
 5. From the Visual query menu, select **Combine -> Merge queries**.
 
@@ -356,7 +359,7 @@ using Visual query without opening the Power Query option.
 
 6. In the **Right table for merge**, select **BuyingGroups**.
 
-7. Select **BuyingGroupID** columns from both the tables. We are going to join using this column.
+7. Select the **BuyingGroupID** columns from both tables. We are going to join using this column.
 
 8. Select **Inner** as the **Join kind**.
 
@@ -411,7 +414,7 @@ using Visual query without opening the Power Query option.
 
     ![](../media/lab-03/image34.png)
 
-16. Let's rename BuyingGroupName column. In the **Data view, double-click on BuyingGroupName** column header to make it editable.
+16. Let's rename the BuyingGroupName column. In the **Data view, double-click on the BuyingGroupName** column header to make it editable.
 
 17. **Rename** the column to **ResellerCompany**.
 
@@ -426,7 +429,7 @@ using Visual query without opening the Power Query option.
 
     ![](../media/lab-03/image36.png)
 
-    >**Note:** The **Customer** box should have a blue border, if enable load is checked.
+    >**Note:** The **Customer** box should have a blue border if enable load is checked.
 
 20. From the Visual query menu, select **Save as view**.
 
@@ -453,7 +456,7 @@ Let's create the Sales view, which is created by merging the tables
 InvoiceLineItems and Invoices with the Reseller view. We have this query
 in Power BI Desktop. We will copy the code from the Advanced Editor. But
 before copying the code, we need to create a merge table using Visual
-query as creating a blank query is not possible in Visual query. Let's
+query as creating a blank query is not possible in Visual Query. Let's
 give this method a try.
 
 1. From the top menu, click the drop-down next to **New SQL query** and then select **New visual query**.    
@@ -466,7 +469,7 @@ give this method a try.
 
 4. From the **Explorer -> Views** section, we need to add tables to the Visual Query panel. Click on the **ellipsis (...)** next to the **Reseller** table and select **Insert into canvas**.
 
-5. From the Visual query editor, select the **Open in popup** to open Power Query editor.
+5. From the Visual query editor, select the **Open in popup** to open the Power Query editor.
 
    ![](../media/lab-03/image41.png)
 
@@ -478,7 +481,7 @@ give this method a try.
 
 8. In the **Right table for merge**, select **Invoices**.
 
-9. Select **InvoiceID** columns from both the tables. We are going to join using this column.
+9. Select the **InvoiceID** columns from both tables. We are going to join using this column.
 
 10. Select **Inner** as the **Join kind**.
 
@@ -497,7 +500,7 @@ give this method a try.
 
 14. From the left **Queries** panel, under the **ADLSData** **(1)** folder, select **Sales (2)** query.
 
-15. From the ribbon select **Home - > Advanced Editor (3)**. Advanced Editor dialog opens.
+15. From the ribbon select **Home - > Advanced Editor (3)**. The Advanced Editor dialog opens.
 
     ![](../media/lab-03/image45.png)
 
@@ -513,9 +516,9 @@ give this method a try.
 
 19. **Navigate back to the browser** where you have the Power Query Editor open.
 
-20. Make sure you have **Merge** query selected.
+20. Make sure you have the **Merge** query selected.
 
-21. From the ribbon select **Home -> Advanced Editor**. Advanced Editor dialog opens.
+21. From the ribbon select **Home -> Advanced Editor**. The Advanced Editor dialog opens.
 
     ![](../media/lab-03/image47.png)
 
@@ -526,7 +529,7 @@ give this method a try.
 
 24. Enter **Ctrl+V** on your keyboard to paste the code you copied from Power BI Desktop.
 
-    >**Note:** If you are working in the lab environment, please select the **ellipsis (...) (1)** on the top right of the screen. Use the slider to **enable** **VM Native Clipboard (2)**. Select **OK** in the dialog. Once done pasting the queries you can disable this option.
+    >**Note:** If you are working in the lab environment, please select the **ellipsis (...) (1)** on the top right of the screen. Use the slider to **enable** **VM Native Clipboard (2)**. Select **OK** in the dialog. Once done pasting the queries, you can disable this option.
 
     ![](../media/lab-03/21042025(9).png)
 
@@ -538,7 +541,7 @@ give this method a try.
 
     ![](../media/lab-03/image50.png)
 
-    If it is easier, delete all the code in the Advanced Editor and paste the below code into Advanced Editor.
+    If it is easier, delete all the code in the Advanced Editor and paste the code below into the Advanced Editor.
 
     ```
     let
@@ -554,7 +557,7 @@ give this method a try.
         #"Removed Columns"
     ```
 
-27. You will be navigated back to the Power Query Editor. In the left, Queries panel, **double-click on Merge** query to rename it.
+27. You will be navigated back to the Power Query Editor. In the left, Queries panel, **double-click on the Merge** query to rename it.
 
 28. **Rename** Merge query to **Sales**.
 
@@ -582,19 +585,19 @@ give this method a try.
 
 Let's create the Product view, which is created by merging
 **ProductItem**, **ProductItemGroup** and **ProductGroups** tables. To
-move things along, we are going to copy code into Advanced Editor.
+move things along, we are going to copy code into the Advanced Editor.
 
 1. From the top menu, click the drop-down next to **New SQL query (1)** and then select **New visual query (2)**.
 
    ![](../media/lab-03/image54.png)
 
-2. From Explorer section, we need to add tables to the Visual Query panel. Click on the **ellipsis (...)** next to the **ProductItem (1)** table and select **Insert into canvas (2)**.
+2. From the Explorer section, we need to add tables to the Visual Query panel. Click on the **ellipsis (...)** next to the **ProductItem (1)** table and select **Insert into canvas (2)**.
 
    ![](../media/lab-03/image55.png)
 
 3. Repeat the same steps for the **ProductItemGroup** and **ProductGroups** tables.
 
-4. From the Visual query editor, select the **Focus mode icon** to open Power Query editor.
+4. From the Visual query editor, select the **Focus mode icon** to open the Power Query editor.
 
    ![](../media/lab-03/image56.png)
 
@@ -606,15 +609,15 @@ move things along, we are going to copy code into Advanced Editor.
 
 7. In the **Right table for merge**, select **ProductItemGroup**.
 
-8. Select **StockItemID** columns from both the tables. We are going to join using this column.
+8. Select the **StockItemID** columns from both tables. We are going to join using this column.
 
 9. Select **Left outer** as the **Join kind**.
 
-10. Select **OK**. New Merge query is created.
+10. Select **OK**. A new Merge query is created.
 
     ![](../media/lab-03/image70.png)
 
-11. With Merge query selected, from the ribbon, select **Home -> Advanced editor**. Advanced editor dialog opens.
+11. With the Merge query selected, from the ribbon, select **Home -> Advanced editor**. The advanced editor dialog opens.
 
     ![](../media/lab-03/image59.png)
 
@@ -622,7 +625,7 @@ move things along, we are going to copy code into Advanced Editor.
 
 12. **Select all the code** in Advanced editor and **delete** it.
 
-13. **Paste** the below code into Advanced editor.
+13. **Paste** the code below into the Advanced editor.
 
     ```
     let
@@ -635,11 +638,11 @@ move things along, we are going to copy code into Advanced Editor.
        #"Choose columns"
     ```
 
-14. Select **OK** to close Advanced Editor. You will be navigated back to Power Query editor.
+14. Select **OK** to close Advanced Editor. You will be navigated back to the Power Query editor.
 
     ![](../media/lab-03/image60.png)
 
-15. In the Queries panel on the left, **double-click on Merge** query to rename it.
+15. In the Queries panel on the left, **double-click on the Merge** query to rename it.
 
 16. **Change the name** of the Merge query to **Product**.
 
@@ -647,7 +650,7 @@ move things along, we are going to copy code into Advanced Editor.
 
     ![](../media/lab-03/image61.png)
 
-18. Select **Save** to Save and Close the Power Query dialog. You will be navigated to Visual query.
+18. Select **Save** to Save and Close the Power Query dialog. You will be navigated to the Visual query.
    
 19. From the Visual query menu, select **Save as view**. Save as view dialog opens. Notice the SQL query is available. You can review it, if you choose it.
 
@@ -663,7 +666,7 @@ move things along, we are going to copy code into Advanced Editor.
 
      ![](../media/lab-03/image63.png)
 
-    We have transformed the data from ADLS Gen2 data source. In this lab, we
+    We have transformed the data from the ADLS Gen2 data source. In this lab, we
     learned how to create shortcuts and explored various options for using
     visual query views to transform data.
 
