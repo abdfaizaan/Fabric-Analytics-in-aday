@@ -3,6 +3,7 @@
 ![](../media/lab-07/main7imahe.png)
 
 # Contents
+
 - Introduction
 - Power BI
     - Task 1: Auto-Create Report
@@ -16,14 +17,14 @@
     - Task 9: Format Line chart
     - Task 10: Connect Power BI Desktop to Semantic model
     - Task 11: Add new data to simulate Direct Lake Mode
-- Clean up Lab environment
+- Clean up the Lab environment
 - References
 
 # Introduction 
 
 In this course, you have been introduced to the Lakehouse, ingested data
 from different data sources into the Lakehouse, set a refresh schedule
-for the data sources and created a data model. Now you are going to
+for the data sources, and created a data model. Now you are going to
 create a report.
 
 By the end of this lab, you will have learned:
@@ -45,11 +46,11 @@ lab, we will re-create the report we have in Power BI.
 
 1. Let's navigate back to the **Fabric workspace** you created in lab 2, named **FAIAD_<inject key="Deployment ID" enableCopy="false"/>**.
 
-2. From the bottom of the left panel select **Fabric experience selector** icon.
+2. From the bottom of the left panel, select the **Fabric experience selector** icon.
 
     ![](../media/lab-07/image6(2)upd.png)
 
-3. Fabric experience dialog opens. Select **Power BI**. You will be navigated to **Power BI Home page**.
+3. Fabric experience dialog opens. Select **Power BI**. You will be navigated to the **Power BI Home page**.
 
     ![](../media/lab-07/image7.png)
 
@@ -57,7 +58,7 @@ lab, we will re-create the report we have in Power BI.
 
     ![](../media/lab-07/image8.png)
 
-5. You will be navigated to **Build your first report screen**. There will be options to build a report using excel, csv, enter data manually or to pick a published semantic model. We have created a semantic model in the previous labs, so let's use that. Select **Pick a published semantic model** option.
+5. You will be navigated to **Build your first report screen**. There will be options to build a report using Excel, CSV, enter data manually, or pick a published semantic model. We have created a semantic model in the previous labs, so let's use that. Select the **Pick a published semantic model** option.
 
     ![](../media/lab-07/image9upd.png)
 
@@ -70,14 +71,14 @@ lab, we will re-create the report we have in Power BI.
     c. **Units by Supplier:** This is the dataset we created using T-SQL.
 
 7. Click the **arrow next to Auto-create report button**. Notice there
-    are two options, Auto-create report and Create a blank report. Let's
+    are two options: Auto-create report and Create a blank report. Let's
     try auto-creating, so select **Auto-create report**.
 
     ![](../media/lab-07/image10.png)
 
-8. Power BI will start auto creating the report. Once the report is
+8. Power BI will start auto-creating the report. Once the report is
     ready, a dialog appears on the top right of the screen. Select
-    **View report now or it will autoload in a few seconds**.
+    **View report now, or it will autoload in a few seconds**.
 
     ![](../media/lab-07/image11upd.png)
 
@@ -85,7 +86,7 @@ lab, we will re-create the report we have in Power BI.
     below. There are a few KPIs and some trend visuals. This is a good start
     if you are analyzing a new model and need a jumpstart.
 
-    >**Note:** Notice on the top menu, you have the option to Edit the report
+    >**Note:** Notice on the top menu, you have the option to edit the report
     or view some of the data as tables. Feel free to explore these options.
 
 9. Let's save this report. From the top menu, select **Save**.
@@ -94,7 +95,7 @@ lab, we will re-create the report we have in Power BI.
 
 10. Save your report dialog opens. Name the report as **rpt_Sales_Auto_Report (1)**
     
-    > **Note:** We are prefixing report name with rpt which is short for report.
+    > **Note:** We are prefixing the report name with rpt, which is short for report.
 
 11. Make sure the report is saved in your workspace,
     **FAIAD_<inject key="Deployment ID" enableCopy="false"/> (2)**.
@@ -122,12 +123,12 @@ Let's create a new report using a blank canvas.
 
     ![](../media/lab-07/image14.png)
 
-3. Select **Pick a published semantic model,** so we can pick the model
+3. Select **Pick a published semantic model** so we can pick the model
     we have created.
 
     ![](../media/lab-07/image15upd.png)
 
-4. Pick a semantic model to use in your report dialog opens. Select
+4. Pick a semantic model to use in your report dialog. Select
     **sm_FAIAD**.
 
 5. Click the **arrow next to Auto-create report button**. Select
@@ -154,7 +155,7 @@ report](../media/lab-07/image17.png)
 
 9. Expand **Canvas background** section.
 
-10. Select **Browse** from **Image** option. File explorer dialog opens.
+10. Select **Browse** from **Image** option. File Explorer dialog opens.
 
 11. Navigate to **Reports** folder on the **desktop** of your lab
     environment.
@@ -245,8 +246,7 @@ report](../media/lab-07/image17.png)
 18. **Paste** the visual by selecting **Ctrl+V** from your keyboard.
     Notice the visual is pasted onto the canvas.
 
-19. With the **new visual highlighted**, in the **Visualization pane ->
-    Build visual -> Fields** section remove **Sales** measure.
+19. With the **new visual highlighted**, in the **Data** section remove **Sales** measure.
 
 20. From the **Data** section, expand **Sales** table and select
     **Units** measure.
@@ -319,7 +319,7 @@ changes to the model.
 
     ![](../media/lab-07/image28.png)
 
-9. Navigate back to **report window/tab** of the browser.
+9. Navigate back to the **report window/tab** of the browser.
 
 10. In the **Data pane** on the right, expand **Date** table. Notice
     Year is not a summation field.
@@ -368,7 +368,7 @@ chart](../media/lab-07/image31.png)
 
     ![](../media/lab-07/image32.png)
 
-11. Navigate back to **report window/tab** of the browser. Notice now,
+11. Navigate back to the **report window/tab** of the browser. Notice now,
     the months are sorted properly.
 
     ![A graph on a screen AI-generated content may be
@@ -425,7 +425,7 @@ reports. This gives a seamless interaction like Power BI Desktop.
 
     ![](../media/lab-07/image36.png)
 
-21. Let's save the report, from the menu select **File -> Save**.
+21. Let's save the report. From the menu, select **File -> Save**.
 
     As mentioned earlier, we will not build all the visuals in this lab. At
     your leisure, feel free to build more visuals.
@@ -474,15 +474,15 @@ model and build visuals.
 
     ![](../media/lab-07/image41.png)
 
-12. Similarly copy and paste the **Sales and Units KPIs**. FYI --
+12. Similarly, copy and paste the **Sales and Units KPIs**. FYI --
     multiple visuals can be copied and pasted together.
 
     ![](../media/lab-07/image42.png)
 
     Notice it is easy to copy visuals from an existing report and paste it
-    to a report that connects to semantic model. Note that the table names,
-    column names, measure names must be the same for copy and paste to work.
-    If they are not the same you may have an error, but this can be easily
+    to a report that connects to a semantic model. Note that the table names,
+    column names, and measure names must be the same for copy and paste to work.
+    If they are not the same, you may have an error, but this can be easily
     resolved.
 
 13. Navigate to **FAIAD.pbix** and select Sales over time line chart.
@@ -492,8 +492,8 @@ model and build visuals.
 15. Navigate to **FAIADTemplate.pbix** and select the report canvas.
 
 16. From the ribbon, select **Home -> Paste**. Notice that the visual
-    does not render. This is because currently semantic model does not
-    create hierarchy from date field.
+    does not render. This is because the current semantic model does not
+    create a hierarchy from the date field.
 
 17. Let's fix this. In **Visualization** panel, under **X-axis** delete
     **StartOfMonth**.
@@ -507,20 +507,20 @@ model and build visuals.
 
     ![](../media/lab-07/image44.png)
 
-20. Let's save the report, from the ribbon select **File -> Save**.
+20. Let's save the report. From the ribbon, select **File -> Save**.
 
 ## Task 11: Add new data to simulate Direct Lake Mode
 
 Typically, in Import mode, once data in the source is refreshed, we need
-to refresh the Power BI model after which the data in the report is
-updated. With Direct Query mode, once data is refreshed in source, it is
-available in Power BI report. However direct query mode is typically
+to refresh the Power BI model, after which the data in the report is
+updated. With Direct Query mode, once data is refreshed in the source, it is
+available in the Power BI report. However, direct query mode is typically
 slow. To solve this problem, Microsoft Fabric has introduced Direct Lake
 mode. Direct Lake is a fast path to load the data from the lake straight
 into the Power BI engine, ready for analysis.
 
 Let's explore the scenario where data is updated in the ADLS Gen2 and
-the changes are immediately reflected in Power BI report without running
+the changes are immediately reflected in the Power BI report without running
 any refreshes.
 
 In a real scenario, data is updated at the source. Since we are in a
@@ -548,7 +548,7 @@ the May 2024 file in ADLS Gen2 and updating the Sales view.
 
     ![](../media/lab-07/image47.png)
 
-7. Since you have already created a connection earlier in the lab, there's no need to create a new one. Your ADLS connection will appear under the list of **Existing connection**.
+7. Since you have already created a connection earlier in the lab, there's no need to create a new one. Your ADLS connection will appear under the list of **Existing connections**.
 
 8. If you did not create this connection earlier in the course, click
     **Create New connection** and complete the following steps:
